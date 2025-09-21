@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="imagens/ico.ico" type="image/x-icon">
+    <title>JAPAN</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            
+             background: linear-gradient(to bottom, #6BA4B4 50%, #1B210D 50%);
+        }
+
+        .inicio {
+            position: relative;
+            text-align: center;
+            height: 1474px;
+            overflow: hidden;
+            perspective: 1px;
+        }
+
+        .titulo {
+            color: white;
+            font-size: 10vw;
+            position:absolute;
+            top: 18%;
+            left: 51%;
+
+            transform: translate(-50%,-50%);
+            z-index: 1;
+        }
+        .fuji {
+            width: 100%;
+            display: block;
+            position: relative;
+            z-index: 2;
+            
+        }
+        .nuvem {
+            width: 10%;
+            position: absolute;
+            top: 27%;
+            left: 31%;
+            z-index: 3;
+        }
+        .nuvem2 {
+           width: 15%;
+            position: absolute;
+            top: 30%;
+            left: 51%;
+            z-index: 3;
+        }
+        .campo {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            top: 590px;
+            left: 0;
+            z-index: 4;
+        }
+
+        nav {
+            padding: 32px;
+        }
+
+        .navlist {
+            color: white;
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+        }
+        
+        .navlist li {
+            list-style: none;
+        }
+
+        .cereja {
+            position: absolute;
+            bottom: 0;
+            width: 20%;
+            z-index: 5;
+        }
+
+        .cerejaEsq {
+            left: 0;
+            top: 10px;
+        }
+        
+        .cerejaDir {
+            right: 0;
+            top: 10px;
+        } 
+        .meio {
+            background-color: #1B210D;
+            padding-top: 10px;
+        }
+        .cards {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-bottom: 40px;
+            
+        }
+
+        .card {
+            width: 279px;
+            height: 202px;
+            background-color: #EFE2BF;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-content: center;
+            align-items: center;
+            border-radius: 10px;
+            box-shadow: 8px 6px 9px 0px #000000a6;
+        }
+        .card img {
+            width: 244px;
+            height: 138px;
+            transition: transform 1s ease-in-out;
+            border-radius: 5px;
+        }
+        .card img:hover {
+             transform: scale(2.1);
+        }
+        .titulo-meio {
+            color: aliceblue;
+            font-size: 96px;
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        footer {
+            text-align: center;
+            background-color: #EFE2BF;
+            padding: 30px;
+            margin-top: 80px;
+            color: #3b3b3b;
+            font-size: 30px;
+        }
+
+        /* ======== Tablet ======== */
+        @media (max-width: 1024px) {
+        .titulo {
+            font-size: 14vw;   /* título proporcional */
+            top: 15%;
+            left: 50%;
+        }
+
+        .nuvem {
+            width: 20vw;
+            top: 22%;
+            left: 15vw;
+        }
+
+        .nuvem2 {
+            width: 25vw;
+            top: 28%;
+            left: 55vw;
+        }
+        
+
+        .cereja {
+            width: 30%; /* cerejeiras maiores */
+        }
+
+        .cards {
+            flex-wrap: wrap; /* quebra linha */
+        }
+
+        .card {
+            flex: 1 1 40%;
+            margin-bottom: 20px;
+        }
+        }
+
+        /* ======== Celular ======== */
+        @media (max-width: 600px) {
+
+        body {
+            
+             background: linear-gradient(to bottom, #6BA4B4 40%, #1B210D 60%);
+        }
+
+        .inicio {
+            position: relative;
+            text-align: center;
+            height: 845px;
+            overflow: hidden;
+            perspective: 1px;
+        }
+
+        .titulo {
+            color: white;
+            font-size: 12vw;
+            position:absolute;
+            top: 36%;
+            left: 51%;
+
+            transform: translate(-50%,-50%);
+            z-index: 1;
+        }
+
+        .fuji {
+            width: 200%;
+            position: absolute;
+            left: -40%;
+            top: 40%;
+            display: block;
+            position: relative;
+            z-index: 2;
+            
+        }
+        .nuvem {
+            width: 25vw;
+            top: 55%;
+            left: 10vw;
+        }
+
+        .nuvem2 {
+            width: 40vw;
+            top: 65%;
+            left: 50vw;
+        }
+
+        .campo {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            top: 600px;
+            left: 0;
+            z-index: 4;
+        }
+
+        .cereja {
+            width: 30%; 
+        }
+
+        .cerejaEsq {
+            left: 0;
+            top: 100px;
+        }
+        
+        .cerejaDir {
+            right: 0;
+            top: 100px;
+        } 
+
+        .cards {
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .card {
+            width: 68%;
+            height: auto;
+            padding: 10px;
+        }
+
+        .titulo-meio {
+            font-size: 12vw;
+        }
+
+        footer {
+            font-size: 20px;
+        }
+        }
+
+    </style>
+</head>
+<body>
+    <main>
+        <header>
+            <nav>
+                <ul class="navlist">
+                    <li>HOME</li>
+                    <li>CIDADES</li>
+                    <li>HISTORIA</li>
+                </ul>
+            </nav>
+        </header>
+    </main>
+    <section class="inicio">
+        <h1 class="titulo">JAPAN</h1>
+        <img class="fuji" src="imagens/fuji.png" alt="" srcset="">
+        <img class="nuvem" src="imagens/nuvem.png" alt="">
+        <img class="nuvem2" src="imagens/nuvem2.png" alt="">
+        <img class="campo" src="imagens/campo.png" alt="" srcset="">
+        <img class="cereja cerejaEsq" src="imagens/CEREJERA ESQ.png" alt="">
+        <img class="cereja cerejaDir" src="imagens/CEREJERA DIR.png" alt="">
+        
+    </section>
+
+     <section class="meio">
+        <h1 class="titulo-meio">日本の歴史</h1>
+        <section class="cards">
+            <div class="card">
+                <img src="imagens/tokyo.webp" alt="" srcset="">
+                <h5>東京</h5>
+            </div>
+            <div class="card">
+                <img src="imagens/kyoto.png" alt="" srcset="">
+                <h5>京都</h5>
+            </div>
+            <div class="card">
+                <img src="imagens/osaka.png" alt="" srcset="">
+                <h5>大阪</h5>
+            </div>
+        </section>
+        <section class="cards">
+            <div class="card">
+                <img src="imagens/hiroshima.png" alt="" srcset="">
+                <h5>広島</h5>
+            </div>
+            <div class="card">
+                <img src="imagens/nara.png" alt="" srcset="">
+                <h5>奈良</h5>
+            </div>
+            <div class="card">
+                <img src="imagens/sapporo.png" alt="" srcset="">
+                <h5>札幌</h5>
+            </div>
+        </section>
+        <section class="cards">
+            <div class="card">
+                <img src="imagens/nagoya.png" alt="" srcset="">
+                <h5>名古屋</h5>
+            </div>
+            <div class="card">
+                <img src="imagens/kanazawa.png" alt="" srcset="">
+                <h5>金沢</h5>
+            </div>
+            <div class="card">
+                <img src="imagens/fukuoka.png" alt="" srcset="">
+                <h5>福岡</h5>
+            </div>
+        </section>
+     </section>
+
+     <footer>
+        <h6>Leonardo M. Sato</h6>
+     </footer>
+</body>
+<script>
+window.addEventListener("scroll", function() {
+  const mobile = window.matchMedia("(max-width: 600px)");
+
+  window.addEventListener("scroll", function() {
+    let scroll = window.scrollY;
+
+    document.querySelector(".fuji").style.transform = `translateY(${scroll * 0.1}px)`;
+    document.querySelector(".campo").style.transform = `translateY(${scroll * -0.5}px)`;
+    document.querySelector(".nuvem").style.transform = `translateY(${scroll * 0.2}px)`;
+    document.querySelector(".nuvem2").style.transform = `translateY(${scroll * 0.2}px)`;
+
+    // Cerejeira esquerda → sobe e vai pra esquerda
+    document.querySelector(".cerejaEsq").style.transform =
+      `translate(${scroll * -0.3}px, ${scroll * -0.8}px)`;
+
+    // Cerejeira direita → sobe e vai pra direita
+    document.querySelector(".cerejaDir").style.transform =
+      `translate(${scroll * 0.3}px, ${scroll * -0.8}px)`;
+
+    // Se for celular → campo não mexe
+    if (mobile.matches) {
+      document.querySelector(".campo").style.transform = `translateY(0px)`;
+    }
+  });
+});
+
+  
+</script>
+</html>
